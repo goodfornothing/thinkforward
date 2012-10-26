@@ -128,6 +128,7 @@ GEM
       jruby-pageant (>= 1.1.1)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
+    pg (0.14.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -219,6 +220,7 @@ DEPENDENCIES
   meta_search (>= 1.1.0.pre)
   mini_magick (~> 3.3)
   mysql2
+  pg
   rails (= 3.2.8)
   rails_autolink
   remotipart
