@@ -1,0 +1,148 @@
+/* Graceful image replacement */
+
+  .ir { position: relative; display: block; overflow: hidden; }
+  .ir a { cursor: pointer; }
+  .ir span { 
+    width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+	
+/* =panel */
+
+	.panel {
+		width: 300px;
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.grid_three .panel:nth-child(3n+3) {
+		margin-right: 0;
+	}
+	
+/* =introduction */
+
+	#introduction {
+		margin-bottom: 50px;
+	}
+	
+	#introduction iframe {
+		float: left;
+		margin-right: 20px;
+		top: 4px;
+	}
+	
+	#introduction .panel {
+		margin: 0;
+		width: 280px;
+		float: right;
+	}
+	
+	#introduction .panel h2 {
+		color: #FFD300;
+		margin-bottom: 17px;
+	}
+	
+	#introduction .panel p {
+		font-size: 13px;
+		line-height: 19px;
+	}
+	
+	#introduction .panel p:last-child {
+		margin: 0;
+	}
+	
+/* =timeline */
+
+	#timeline {
+		background: #F2F2F2;
+		border-bottom: 20px solid #FFD300;
+		margin-bottom: 20px;
+		padding: 30px 0 20px;
+	}
+	
+	#timeline #the_journey {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		min-height: 300px;
+		position: relative;
+		background: url(<%= asset_path "assets/timeline.png" %>) no-repeat center top;
+	}
+	
+	#timeline #the_journey li {
+		display: block;
+		position: absolute;
+		padding: 8px 10px;
+		background: #B3B3B3;
+	}
+	
+	#timeline #the_journey li.step_1 { left: 30px; top: 10px; background: #E6E6E6; }
+	#timeline #the_journey li.step_2 { bottom: 65px; left: 0px; width: 60px; }
+	#timeline #the_journey li.step_3 { bottom: 40px; left: 205px; color: #ffffff; background: #FFD300; }
+	#timeline #the_journey li.step_4 { top: 55px; left: 290px; background: #666666; color: #ffffff; }
+	#timeline #the_journey li.step_5 { top: 70px; left: 520px; color: #ffffff; background: #FFD300;  }
+	#timeline #the_journey li.step_6 { bottom: 0; left: 600px; background: #666666; color: #ffffff; }
+	#timeline #the_journey li.step_7 { bottom: 70px; left: 800px; }
+	
+/* =blog */
+
+	#blog {
+		margin-bottom: 80px;
+	}
+	
+	#blog .panel h2 {
+		text-align: center;
+		padding-top: 35px;
+		margin-bottom: 135px;
+	}
+	
+	#blog #inspiration.panel {
+		background: url(<%= asset_path "assets/inspiration.png" %>) no-repeat center 10px;
+	}
+	
+	#blog #challenge.panel {
+		background: url(<%= asset_path "assets/challenge.png" %>) no-repeat center 80px;
+	}
+	
+	#blog #story.panel {
+		background: url(<%= asset_path "assets/story.png" %>) no-repeat center 80px;
+	}
+	
+	#blog #story article {
+		background: #F2F2F2;
+		padding: 15px 20px 20px;
+	}
+	
+	#blog #story article p:last-child {
+		margin: 0;
+	}
+	
+/* =discussion */
+
+	#discussion {
+		overflow: visible;
+		margin-bottom: 50px;
+	}
+
+	#discussion h2:before {
+		content: '';
+		position: absolute;
+		top: -50px;
+		left: 40px;
+		width: 120px;
+		height: 109px;
+		display: block;
+		background: url(<%= asset_path "assets/discussion.png" %>) no-repeat top left;
+	}
+
+	#discussion h2 {
+		background: #CCCCCC;
+		color: #ffffff;
+		text-align: center;
+		line-height: 75px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	

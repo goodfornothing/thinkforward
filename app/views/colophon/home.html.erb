@@ -1,0 +1,70 @@
+<section id="introduction" class="container">
+	<% unless @introduction_video.nil? %>
+	<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= @introduction_video.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="620" height="340" frameborder="0"></iframe>
+	<% end %>
+	<div class="panel">
+		<p>As we've been working on our financial plan, we've noticed that we tend to talk about our business in terms of the outputs. We don't talk enough about the things that make us who we are &ndash; what we do and why we do it.</p>
+		<p>At our core, we're a team of smart people working together to solve the most pressing problems for world class organisations.</p>
+		<p>So we've started a collaborative project to open up a dialogue around what we do at E&amp;Y and why it's important &ndash; our purpose. To re-connect us with our work and to collectively shape a story about where we're heading.</p>
+		<p>Please get involved and share your ideas, experiences and energy.</p>
+	</div>
+</section>
+
+<section id="timeline">
+	<div class="container">
+		<h2>The Journey</h2>
+		<ol id="the_journey">
+			<li class="step_1">Senior leadership team</li>
+			<li class="step_2">Senior leadership team</li>
+			<li class="step_3">Workshops</li>
+			<li class="step_4">Town hall inputs</li>
+			<li class="step_5">Web forums</li>
+			<li class="step_6">Client interviews</li>
+			<li class="step_7">The story</li>	
+		</ol>
+	</div>
+</section>
+
+<div class="grid_three container" id="blog">
+	<section id="inspiration" class="panel">
+		<h2>Inspiration</h2>
+		<% unless @inspiration_video.nil? %>
+		<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= @inspiration_video.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="300" height="160" frameborder="0"></iframe>
+		<% end %>
+	</section>
+	<section id="challenge" class="panel">
+		<h2>Challenge</h2>
+		<% unless @challenge_video.nil? %>
+		<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= @challenge_video.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="300" height="160" frameborder="0"></iframe>
+		<% end %>
+	</section>
+	<section id="story" class="panel">
+		<h2>Our story</h2>
+		<% if @post.present? %>
+		<article>
+			<h3><%= @post.title %></h3>
+			<%= simple_format(auto_link(@post.body)) %>
+		</article>
+		<% end %>
+	</section>
+</div>
+
+<section id="discussion" class="container">
+	
+	<h2>Start a conversation</h2>
+	
+	<iframe id="forum_embed"
+	 src="javascript:void(0)"
+	 scrolling="yes"
+	 frameborder="0"
+	 width="940"
+	 height="300">
+	</iframe>
+
+	<script type="text/javascript">
+	 document.getElementById("forum_embed").src =
+	  "https://groups.google.com/forum/embed/?place=forum/find-better-problems&hidesubject=true&hideforumtitle=true&showpopout=false&showtabs=false&showpopout=true&theme=default&parenturl=" +
+	  encodeURIComponent(window.location.href) + "#!forum/find-better-problems";
+	</script>
+	
+</section>

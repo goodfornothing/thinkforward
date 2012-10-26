@@ -1,0 +1,49 @@
+/*
+	White: ffffff
+	Black: 1a1a1a
+	Grey Light: F2F2F2
+	Grey Dark: 666666
+	Yellow: FFD300
+*/
+
+@media all {
+
+	body { 
+		background: #ffffff;
+	}
+   
+	.container {
+		width: 940px; margin: 0 auto; 
+	  overflow: hidden; display: block;
+	}
+	
+	/* =header */
+	
+		header.container {
+			background: url(<%= asset_path "branding/evolve_yourself.gif" %>) top right no-repeat;
+			height: 245px;
+			margin-bottom: 40px;
+			position: relative;
+		}
+		
+		header h1 {
+			position: absolute;
+			bottom: 56px;
+			font-size: 34px;
+		}
+		
+	/* =footer */
+	
+		footer {
+			background: #CCCCCC;
+			color: #ffffff;
+		}
+		
+		footer p {
+			font-size: 11px;
+			text-align: right;
+			margin: 0;
+			padding: 10px 20px;
+		}
+	
+}
