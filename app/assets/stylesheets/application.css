@@ -14,5 +14,4 @@
  *= require base-datasets
  *= require layout
  *= require assets
- *= require_tree ./views
  */
