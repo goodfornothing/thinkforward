@@ -27,8 +27,6 @@ gem "fog", "~> 1.3.1"
 gem "remotipart"
 gem 'rails_autolink'
 
-gem 'exception_notification'
-
 group :assets do
   gem 'uglifier', '>= 1.0.3'
 	gem 'jquery-ui-rails'
