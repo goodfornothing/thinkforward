@@ -19,12 +19,7 @@ ActiveAdmin.register Post do
 			f.input :featured, :label => "Featured on homepage"
     end
     f.inputs "Body" do
-      #if post.new_record? || post.body.is_json?
-			if false
-        f.sir_trevor_text_area :body
-      else 
-        f.input :body
-      end
+       f.input :body
     end
     f.buttons
   end
@@ -34,12 +29,7 @@ ActiveAdmin.register Post do
       attributes_table_for post do
         row :title
         row :body do
-         #if post.body.is_json?
-				 if false
-     		   render_sir_trevor(post.body)
-     		 else
-     		   simple_format(post.body).html_safe
-     	   end
+     		  simple_format(post.body).html_safe
      	  end
       end
     end

@@ -28,7 +28,6 @@ gem "remotipart"
 gem 'rails_autolink'
 
 gem 'exception_notification'
-gem 'sir-trevor-rails','>= 0.1.1'
 
 group :assets do
   gem 'uglifier', '>= 1.0.3'
