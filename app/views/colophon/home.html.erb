@@ -42,8 +42,8 @@
 		<h2>Our story</h2>
 		<% if @post.present? %>
 		<article>
-			<h3><%= @post.title %></h3>
-			<%= simple_format(auto_link(@post.body)) %>
+			<h3><%= link_to @post.title, story_path %></h3>
+			<%= simple_format(auto_link(@post.excerpt)) %>
 		</article>
 		<% end %>
 	</section>
@@ -58,13 +58,13 @@
 	 scrolling="yes"
 	 frameborder="0"
 	 width="940"
-	 height="300">
+	 height="500">
 	</iframe>
 
 	<script type="text/javascript">
 	 document.getElementById("forum_embed").src =
-	  "https://groups.google.com/forum/embed/?place=forum/find-better-problems&hidesubject=true&hideforumtitle=true&showpopout=false&showtabs=false&showpopout=true&theme=default&parenturl=" +
-	  encodeURIComponent(window.location.href) + "#!forum/find-better-problems";
+	  "https://groups.google.com/forum/embed/?place=forum/ourpurpose&hidesubject=true&hideforumtitle=true&showpopout=false&showtabs=false&showpopout=true&theme=default&parenturl=" +
+	  encodeURIComponent(window.location.href) + "#!forum/ourpurpose";
 	</script>
 	
 </section>

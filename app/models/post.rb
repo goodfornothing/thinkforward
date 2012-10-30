@@ -2,14 +2,13 @@ class Post < ActiveRecord::Base
 
 	scope :feature, where(:featured => true)
  
-	attr_accessible :title, :body, :featured
-	validates_presence_of :title, :body
+	attr_accessible :title, :body, :featured, :excerpt
+	validates_presence_of :title, :body, :excerpt
 		
 	extend FriendlyId
   friendly_id :title, use: :slugged
 
 	belongs_to :user
-	
 	before_save :assert_featured
 
 	def assert_featured

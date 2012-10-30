@@ -11,10 +11,7 @@ ActiveAdmin.register Video do
     default_actions
   end
 	
-	form do |f|
-		f.inputs "State" do
-			f.input :featured, :label => "Featured on homepage"
-		end                
+	form do |f|              
     f.inputs "Video" do   
       f.input :vimeo, :label => "Vimeo ID"                  
       f.input :tags, :as => :check_boxes

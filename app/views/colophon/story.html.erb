@@ -1,0 +1,22 @@
+<section id="stories" class="container">
+	
+	<% if @stories.any? %>
+	
+		<% @stories.each do |story| %>
+			
+			<article>
+				
+				<% if story.class == Post %>
+					<h3><%= story.title %></h3>
+					<%= simple_format(auto_link(story.body)) %>
+				<% elsif story.class == Video %>
+					<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= story.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="940" height="520" frameborder="0"></iframe>
+				<% end %>
+				
+			</article>
+			
+		<% end %>
+		
+	<% end %>
+	
+</section>

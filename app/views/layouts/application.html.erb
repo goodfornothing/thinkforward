@@ -2,11 +2,11 @@
 <html>
 	<head>
 		
-		<title>Our Purpose &ndash; EY</title>
+		<title>Our Purpose &mdash; Ernst &amp; Young</title>
 		
 		<meta name="description" content="Our Purpose" />
 		<meta name="keywords" content="our purpose, ernst, young" />
-		<link rel="shortcut icon" href="/favicon.ico?v2" />
+		<link rel="shortcut icon" href="/favicon.ico?v1" />
 		<meta name="robots" content="noindex,nofollow" />
 	
 		<%= stylesheet_link_tag    "application", :media => "all" %>
@@ -33,7 +33,15 @@
 	<body class="<%= "section_#{params[:controller].parameterize.underscore} view_#{params[:action]}"%>">
 
 		<header class="container">
-			<h1>Our Purpose</h1>
+			<h1>
+				<% if params[:action] == "home" %>
+					Our Purpose 
+				<% else %>
+					<%= link_to "Our Purpose", root_path %>
+					<span><%= params[:action].titlecase %></span>
+				<% end %>
+				
+			</h1>
 		</header>
 
 		<div id="primary_content">
