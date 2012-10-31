@@ -15,6 +15,8 @@
 					<% end %>
 					
 				<% elsif story.class == Video %>
+					<h3><%= story.tags.first.title %></h3>
+				
 					<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= story.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="940" height="520" frameborder="0"></iframe>
 				<% end %>
 				
