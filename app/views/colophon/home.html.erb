@@ -28,18 +28,21 @@
 <div class="grid_three container" id="blog">
 	<section id="inspiration" class="panel">
 		<h2>Inspiration</h2>
+		<p>Ideas to inspire our thinking<br /><br /></p>
 		<% unless @inspiration_video.nil? %>
 		<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= @inspiration_video.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="300" height="160" frameborder="0"></iframe>
 		<% end %>
 	</section>
 	<section id="challenge" class="panel">
 		<h2>Challenge</h2>
+		<p>Ideas to provoke: the interconnectedness of a globalised society</p>
 		<% unless @challenge_video.nil? %>
 		<iframe id="vimeoembed" src="http://player.vimeo.com/video/<%= @challenge_video.vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=FFD300" width="300" height="160" frameborder="0"></iframe>
 		<% end %>
 	</section>
 	<section id="story" class="panel">
 		<h2>Our story</h2>
+		<p>Follow the updates and emerging story from this collaborative project</p>
 		<% if @post.present? %>
 		<article>
 			<h3><%= link_to @post.title, story_path %></h3>
@@ -58,7 +61,7 @@
 	 scrolling="yes"
 	 frameborder="0"
 	 width="940"
-	 height="500">
+	 height="450">
 	</iframe>
 
 	<script type="text/javascript">
