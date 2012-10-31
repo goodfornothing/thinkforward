@@ -21,7 +21,7 @@ class ColophonController < ApplicationController
 	  def authenticate
 			if Rails.env.production?
 	    	authenticate_or_request_with_http_basic do |username, password|
-		      password == "th1nkf0rward"
+		      password == "eypurpose"
 		    end
 			else
 				true
