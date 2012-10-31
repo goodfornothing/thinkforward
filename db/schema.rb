@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121030121202) do
+ActiveRecord::Schema.define(:version => 20121031121911) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20121030121202) do
     t.boolean  "featured",   :default => false
     t.string   "slug"
     t.string   "excerpt"
+    t.string   "vimeo"
   end
 
   create_table "tags", :force => true do |t|

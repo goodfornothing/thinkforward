@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 
 	scope :feature, where(:featured => true)
  
-	attr_accessible :title, :body, :featured, :excerpt
+	attr_accessible :title, :body, :featured, :excerpt, :vimeo, :slug
 	validates_presence_of :title, :body, :excerpt
 		
 	extend FriendlyId

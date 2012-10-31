@@ -13,15 +13,17 @@ ActiveAdmin.register Post do
     end
   end
   
-  form :html => { :enctype => "multipart/form-data" }  do |f|
+  form do |f|
     f.inputs "Post" do   
       f.input :title
+			f.input :vimeo
 			f.input :featured, :label => "Featured on homepage"
     end
     f.inputs "Body" do
-       f.input :body
+			f.input :excerpt
+      f.input :body
     end
-    f.buttons
+    f.actions
   end
   
   show do |post|
